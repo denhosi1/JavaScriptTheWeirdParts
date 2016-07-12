@@ -43,6 +43,7 @@ var user = {
 }
 
 document.getElementById("button").addEventListener("click", user.clickHandler);
+//Uses button from index.html. 
 //What will the output be here?
 
 /******      EQUALITY      ******/
