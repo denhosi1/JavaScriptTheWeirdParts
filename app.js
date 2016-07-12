@@ -230,3 +230,38 @@ console.log(this);
 // }
 
 // console.log("Jane:" + jane.GetFullName());
+
+
+/******       CLOSURES      ******/
+
+/* Example One */
+function greet(whattosay) {
+    return function(name) {
+        console.log(whattosay + ' ' + name);
+    }
+}
+
+greet('Hi')('Shaun');
+
+var sayHi = greet('Hi');
+sayHi('Tony');
+
+/* Example Two */
+
+function ClosurePerson(pName) {
+    var _name = pName;
+}
+
+var me = new ClosurePerson('Shaun');
+
+function NewClosurePerson(pName) {
+    var _name = pName;
+    
+    this.getName = function() {
+        return _name;
+    }
+}
+
+var you = new NewClosurePerson('Someone');
+
+you.getName();
