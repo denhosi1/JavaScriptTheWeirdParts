@@ -4,7 +4,19 @@
 console.log(window);
 console.log(this);
 
-// /* Example Two */
+/* Example Two */
+
+// var a = "dog";
+
+// function PrintCat() {
+// 	var a = "cat";
+// 	console.log(this.a);
+// }
+
+// PrintCat();
+
+
+// /* Example Three */
 //  var firstname = "James";
 //  var lastname = "Bond";
 
@@ -104,6 +116,8 @@ console.log(this);
 // 		status: true
 // 	}
 // }
+
+// console.log(doStuff());
 	
 // function doStuffAgain() {
 // 	return {
@@ -111,12 +125,11 @@ console.log(this);
 // 	}
 // }
 	
-// console.log(doStuff());
 // console.log(doStuffAgain());
 
 // *****      EXECUTION CONTEXT - CREATION AND HOISTING      *****
 
-// /* Example One */
+/* Example One */
 // var nerf = "Hello Nerf!";
 
 // function NerfThis() {
@@ -126,7 +139,7 @@ console.log(this);
 // NerfThis();
 // console.log(nerf);
 
-// /* Example Two */
+/* Example Two */
 // DontNerfThis();
 // console.log(newNerf);
 
@@ -136,7 +149,7 @@ console.log(this);
 // 	console.log("Called DontNerfThis");
 // }
 
-// /******      FIRST CLASS FUNTIONS      ******/
+// /******      FIRST CLASS FUNCTIONS      ******/
 // function ThisIsAnObject() {
 // 	console.log("I am an object");
 // }
@@ -221,9 +234,11 @@ console.log(this);
 // }
 
 // var bob = new ProtoPerson("Bob", "Burger");
-// var jane = new ProtoPerson("Jane", "Doe");
 
 // console.log(bob.__proto__);
+
+/* Example Three */
+// var jane = new ProtoPerson("Jane", "Doe");
 
 // ProtoPerson.prototype.GetFullName = function() {
 // 	return this.firstname + " " + this.lastname;
@@ -264,4 +279,28 @@ console.log(this);
 
 // var you = new NewClosurePerson('Someone');
 
-// you.getName();
+// console.log(you.getName());
+
+
+/******      REALLY WEIRD STUFF      ******/
+// var p = [0];
+// p == p;
+// p == !p;
+
+// Array(3) == ",,";
+
+// typeof NaN;
+
+// NaN==NaN;
+
+// typeof null;
+// null instanceof Object;
+
+// 0.1+0.2==0.3;
+
+// Math.max()>Math.min();
+// Math.max()<Math.min();
+
+// true+true===2;
+// true-true===0;
+// true===1;
